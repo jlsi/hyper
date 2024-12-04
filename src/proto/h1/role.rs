@@ -121,6 +121,9 @@ impl Http1Transaction for Server {
         let method;
         let path_range;
 
+        //TODO debuggging
+        pritln!("======  default max headerss {}", DEFAULT_MAX_HEADERS);
+        pritln!("======  specified max headers {:?}", ctx.h1_max_headers);
         // Both headers_indices and headers are using uninitialized memory,
         // but we *never* read any of it until after httparse has assigned
         // values into it. By not zeroing out the stack memory, this saves
@@ -1502,6 +1505,11 @@ fn record_header_indices(
 
     for (header, indices) in headers.iter().zip(indices.iter_mut()) {
         if header.name.len() >= (1 << 16) {
+            //TODO debuggging
+            println!(
+                "===== error: header name larger than 64kb: {:?}",
+                header.name
+            );
             debug!("header name larger than 64kb: {:?}", header.name);
             return Err(crate::error::Parse::TooLarge);
         }
