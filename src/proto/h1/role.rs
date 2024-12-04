@@ -137,6 +137,9 @@ impl Http1Transaction for Server {
         let len;
         let headers_len;
 
+        //TODO(tacogips ) debugging
+        println!("---- MAX HEADERS:", MAX_HEADERS);
+
         // Unsafe: both headers_indices and headers are using uninitialized memory,
         // but we *never* read any of it until after httparse has assigned
         // values into it. By not zeroing out the stack memory, this saves
@@ -1398,6 +1401,11 @@ fn record_header_indices(
 
     for (header, indices) in headers.iter().zip(indices.iter_mut()) {
         if header.name.len() >= (1 << 16) {
+            //TODO(tacogips ) debugging
+            println!(
+                "---- error: header name larger than 64kb: {:?}:",
+                header.name
+            );
             debug!("header name larger than 64kb: {:?}", header.name);
             return Err(crate::error::Parse::TooLarge);
         }
