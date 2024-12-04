@@ -167,6 +167,7 @@ impl Http1Transaction for Server {
                 }
                 Ok(httparse::Status::Partial) => return Ok(None),
                 Err(err) => {
+                    println!("======  parse_with_uninit_headers error {:?}", err);
                     return Err(match err {
                         // if invalid Token, try to determine if for method or path
                         httparse::Error::Token => {
