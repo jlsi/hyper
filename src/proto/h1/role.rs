@@ -138,7 +138,7 @@ impl Http1Transaction for Server {
         let headers_len;
 
         //TODO(tacogips ) debugging
-        println!("---- MAX HEADERS:", MAX_HEADERS);
+        println!("---- MAX HEADERS: {}", MAX_HEADERS);
 
         // Unsafe: both headers_indices and headers are using uninitialized memory,
         // but we *never* read any of it until after httparse has assigned
