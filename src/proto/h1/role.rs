@@ -122,8 +122,8 @@ impl Http1Transaction for Server {
         let path_range;
 
         //TODO debuggging
-        pritln!("======  default max headerss {}", DEFAULT_MAX_HEADERS);
-        pritln!("======  specified max headers {:?}", ctx.h1_max_headers);
+        println!("======  default max headerss {}", DEFAULT_MAX_HEADERS);
+        println!("======  specified max headers {:?}", ctx.h1_max_headers);
         // Both headers_indices and headers are using uninitialized memory,
         // but we *never* read any of it until after httparse has assigned
         // values into it. By not zeroing out the stack memory, this saves
