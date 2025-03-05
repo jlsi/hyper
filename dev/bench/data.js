@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1741143657821,
+  "lastUpdate": 1741143715364,
   "repoUrl": "https://github.com/jlsi/hyper",
   "entries": {
     "connect": [
@@ -41643,6 +41643,114 @@ window.BENCHMARK_DATA = {
             "name": "http2_parallel_x10_res_1mb",
             "value": 6987886,
             "range": "± 768294",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sean@seanmonstar.com",
+            "name": "Sean McArthur",
+            "username": "seanmonstar"
+          },
+          "committer": {
+            "email": "sean@seanmonstar.com",
+            "name": "Sean McArthur",
+            "username": "seanmonstar"
+          },
+          "distinct": true,
+          "id": "621d8e4d7788bfd2d62d15d40a73efae7f9a0bf0",
+          "message": "v1.6.0",
+          "timestamp": "2025-01-28T08:51:52-05:00",
+          "tree_id": "f2c9a8f107429b71c65c294a0e89cd35dbd4fd6f",
+          "url": "https://github.com/jlsi/hyper/commit/621d8e4d7788bfd2d62d15d40a73efae7f9a0bf0"
+        },
+        "date": 1741143713757,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "http1_consecutive_x1_both_100kb",
+            "value": 67099,
+            "range": "± 1479.10",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_both_10mb",
+            "value": 4329569,
+            "range": "± 262518.17",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_empty",
+            "value": 20897,
+            "range": "± 555.30",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http1_consecutive_x1_req_10b",
+            "value": 22423,
+            "range": "± 358.83",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_empty",
+            "value": 30749,
+            "range": "± 604.73",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_req_100kb",
+            "value": 98192,
+            "range": "± 1222.68",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_consecutive_x1_req_10b",
+            "value": 34186,
+            "range": "± 1109.13",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_empty",
+            "value": 88075,
+            "range": "± 1282.04",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks",
+            "value": 23942239,
+            "range": "± 32400058.23",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks_adaptive_window",
+            "value": 23858215,
+            "range": "± 16535571.70",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10kb_100_chunks_max_window",
+            "value": 7449518,
+            "range": "± 132221.63",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_req_10mb",
+            "value": 49999898,
+            "range": "± 512138.57",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_res_10mb",
+            "value": 49945086,
+            "range": "± 821759.87",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "http2_parallel_x10_res_1mb",
+            "value": 5059212,
+            "range": "± 76172.83",
             "unit": "ns/iter"
           }
         ]
