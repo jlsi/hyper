@@ -1,6 +1,6 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1658930742034,
-  "repoUrl": "https://github.com/hyperium/hyper",
+  "lastUpdate": 1741143657821,
+  "repoUrl": "https://github.com/jlsi/hyper",
   "entries": {
     "connect": [
       {
@@ -12631,6 +12631,36 @@ window.BENCHMARK_DATA = {
             "name": "hello_world_16",
             "value": 49535,
             "range": "± 3148",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "sean@seanmonstar.com",
+            "name": "Sean McArthur",
+            "username": "seanmonstar"
+          },
+          "committer": {
+            "email": "sean@seanmonstar.com",
+            "name": "Sean McArthur",
+            "username": "seanmonstar"
+          },
+          "distinct": true,
+          "id": "621d8e4d7788bfd2d62d15d40a73efae7f9a0bf0",
+          "message": "v1.6.0",
+          "timestamp": "2025-01-28T08:51:52-05:00",
+          "tree_id": "f2c9a8f107429b71c65c294a0e89cd35dbd4fd6f",
+          "url": "https://github.com/jlsi/hyper/commit/621d8e4d7788bfd2d62d15d40a73efae7f9a0bf0"
+        },
+        "date": 1741143656084,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "hello_world_16",
+            "value": 46037,
+            "range": "± 8928.99",
             "unit": "ns/iter"
           }
         ]
